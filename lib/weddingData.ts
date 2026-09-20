@@ -1,4 +1,4 @@
-export const WEDDING_DATE_ISO = "2027-06-19T08:00:00+07:00";
+export const WEDDING_DATE_ISO = "2026-09-20T09:00:00+07:00";
 
 export type CoupleRole = "putra" | "putri";
 
@@ -14,51 +14,53 @@ export const couple: Record<
   }
 > = {
   groom: {
-    name: "[Nama Lengkap Pengantin Pria]",
+    name: "Muhammad Yusron Nawawi",
     // used as-is (no brackets) for the big display names and the Hero/
     // Mempelai monogram initial (shortName.charAt(0)) — a bracket here
     // would render as a stray "[" instead of a letter
-    shortName: "Pria",
+    shortName: "Yusron",
     role: "putra",
-    father: "Bapak [Nama Ayah Pria]",
-    mother: "Ibu [Nama Ibu Pria]",
-    instagram: "@username_pria",
+    father: "Alm. Bapak Hasan Busri",
+    mother: "Ibu Nuraini",
+    instagram: "",
   },
   bride: {
-    name: "[Nama Lengkap Pengantin Wanita]",
-    shortName: "Wanita",
+    name: "Charis Khoirun Nisak",
+    shortName: "Charis",
     role: "putri",
-    father: "Bapak [Nama Ayah Wanita]",
-    mother: "Ibu [Nama Ibu Wanita]",
-    instagram: "@username_wanita",
+    father: "Bapak Kamirun",
+    mother: "Ibu Zunairoh",
+    instagram: "",
   },
 };
 
 export const events = [
   {
     title: "Akad Nikah",
-    time: "08.00 WIB — Selesai",
-    date: "Sabtu, 19 Juni 2027",
+    time: "09.00 WIB — 10.00 WIB",
+    date: "Minggu, 20 September 2026",
   },
   {
     title: "Resepsi",
     time: "10.00 WIB — Selesai",
-    date: "Sabtu, 19 Juni 2027",
+    date: "Minggu, 20 September 2026",
   },
 ];
 
 export const venue = {
-  name: "[Nama Lokasi Acara]",
-  location: "[Alamat lengkap venue — jalan, kecamatan, kabupaten/kota, provinsi]",
-  mapsUrl: "https://maps.app.goo.gl/REPLACE_ME",
+  name: "Kediaman Mempelai Laki-laki",
+  location:
+    "Jl. Tole Iskandar No. 15, Kel. Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415",
+  mapsUrl: "https://goo.gl/maps/RKYQcyQRvSh3GyVQ8?g_st=ac",
 };
 
 export const bankAccounts = [
-  { bank: "[Nama Bank]", number: "0000000000", holder: "[Nama Lengkap Pengantin Pria]" },
-  { bank: "[Nama Bank]", number: "0000000000", holder: "[Nama Lengkap Pengantin Wanita]" },
+  { bank: "BRI", number: "623201010122534", holder: "Charis Khoirun Nisak" },
+  { bank: "BCA", number: "8691860272", holder: "Muhammad Yusron" },
 ];
 
 export const giftAddress = {
-  recipient: "[Nama Lengkap Penerima Kado]",
-  address: "[Alamat lengkap untuk pengiriman kado fisik]",
+  recipient: "Muhammad Yusron Nawawi & Charis Khoirun Nisak",
+  address:
+    "Jl. Tole Iskandar No. 15, Kel. Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415",
 };

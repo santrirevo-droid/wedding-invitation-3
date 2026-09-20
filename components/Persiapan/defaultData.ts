@@ -4,12 +4,12 @@ import type { ProgressData } from "./types";
 // Semua isi di sini bisa diedit langsung dari halaman /persiapan.
 export const DEFAULT_DATA: ProgressData = {
   settings: {
-    nameFirst: "[Nama Lengkap Pengantin Pria]",
-    nameSecond: "[Nama Lengkap Pengantin Wanita]",
-    weddingDate: "2027-06-19",
-    ceremonyTime: "08:00",
-    venue: "[Nama Lokasi Acara]",
-    venueMapUrl: "https://maps.app.goo.gl/REPLACE_ME",
+    nameFirst: "Muhammad Yusron Nawawi",
+    nameSecond: "Charis Khoirun Nisak",
+    weddingDate: "2026-09-20",
+    ceremonyTime: "09:00",
+    venue: "Kediaman Mempelai Laki-laki",
+    venueMapUrl: "https://goo.gl/maps/RKYQcyQRvSh3GyVQ8?g_st=ac",
     totalBudget: 0,
   },
   tasks: [
