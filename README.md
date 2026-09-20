@@ -12,19 +12,19 @@ Undangan pernikahan digital — Next.js. Diduplikat dari `wedding-invitation-2` 
 - [ ] Foto-foto di `public/` (bila ditambahkan nanti) dan galeri — belum ada, tambahkan sesuai kebutuhan.
 - [x] ~~Font "TT Fors" ... trial, no-public-site~~ — sudah diganti total ke Google Fonts (Cormorant Garamond, Italianno, Jost, Amiri); tidak ada lagi font lokal berlisensi trial di repo ini.
 - [ ] Password edit `/persiapan/itinerary` masih default `"0000"` (lihat `components/Persiapan/Itinerary.tsx`) — ganti bila perlu keamanan lebih.
-- [ ] Backend (Redis/KV untuk fitur Wishes & Daftar Tamu) belum disambungkan — lihat bagian **Environment variables** di bawah. Sambungkan ke store Upstash/Vercel KV milik proyek ini sendiri, bukan yang dipakai `wedding-invitation-2` — kunci Redis memang sudah dinamespace otomatis per pasangan (`lib/coupleSlug.ts`), tapi tetap lebih rapi kalau datanya benar-benar terpisah per pernikahan.
+- [x] Backend (Redis/KV untuk fitur Wishes & Daftar Tamu) — sudah disambungkan ke store Upstash `upstash-kv-bistre-book` milik proyek ini sendiri (lihat bagian **Environment variables** di bawah); kunci Redis-nya sudah dinamespace otomatis per pasangan lewat `lib/coupleSlug.ts`.
 
-## Tampilan ("blush garden")
+## Tampilan ("botanical grove")
 
-- **Warna** — ground gading cerah bersemu blush & sage, emas-cokelat
-  antik untuk ornamen, cokelat hangat untuk teks. Lihat `app/globals.css`.
+- **Warna** — ground sage pucat bersemu krem, moss/olive untuk ornamen,
+  foil emas-hijau botanical untuk teks bertakhta. Lihat `app/globals.css`.
   Nama variabel CSS (`--maroon-deep`, `--gold`, dst.) sengaja dipertahankan
   dari tema lama supaya class Tailwind di belasan komponen tidak perlu
-  diubah; baca `maroon-*` sebagai "ground halaman" (sekarang terang),
+  diubah; baca `maroon-*` sebagai "ground halaman" (sekarang hijau pucat),
   `accent` sebagai "warna ornamen di atas ground", `gold-*` sebagai "tinta
   di dalam kartu", `on-maroon-*` sebagai "teks di atas ground".
 - **Kedalaman** — `components/BackgroundPattern` menumpuk gradasi dasar,
-  wash blush + sage + krem, grain kertas, lalu vignette hangat tipis.
+  wash sage + krem, grain kertas, lalu vignette hangat tipis.
   Grain-nya memakai `mix-blend-multiply`, bukan `overlay`: di atas ground
   terang, overlay mencerahkan sebanyak ia menggelapkan sehingga hanya jadi
   noise — di-multiply, tekstur yang sama terbaca sebagai serat kertas.
