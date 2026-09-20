@@ -1,53 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  /* ── "Blush garden" ───────────────────────────────────────────────────
-     A bright, soft ground: warm ivory washed with blush and sage, antique
-     gold-brown for ornament, deep warm brown for type.
+  /* ── "Botanical grove" ────────────────────────────────────────────────
+     A bright, natural ground: soft leaf-green washed cream, mossy olive
+     for ornament, deep forest ink for type.
 
-     This is an inversion of the dark theme the design was built on, so
-     every role flipped, not just the hex values: text ON the ground went
-     from ivory to brown, the translucent plates went from near-black to
-     near-white, and the gilded foil gradient had to go DARKER (a pale gold
-     gradient is invisible on ivory — it only read as metal against black).
+     This is a re-tone of the "blush garden" palette the design was built
+     on, so every role kept its job, just recoloured: the ground moved from
+     ivory to a pale sage wash, ornament/ink moved from warm brown-gold to
+     moss/olive, and the gilded foil gradient became a botanical brass-green
+     so it still reads as metal, just leaf-toned metal.
 
      Variable NAMES are inherited and deliberately kept: ~15 components
      reference these Tailwind tokens. Read "maroon-*" as "the page ground"
-     (now light), "accent" as "ornament colour on the ground", "gold-*" as
-     "ink inside a card", "on-maroon-*" as "text on the ground".  */
+     (now pale sage), "accent" as "ornament colour on the ground", "gold-*"
+     as "ink inside a card", "on-maroon-*" as "text on the ground".  */
 
   /* the ground, lightest at the top of the page */
-  --maroon-light: #fdf8f4;
-  --maroon: #f9f1ea;
-  --maroon-deep: #f4e8de;
+  --maroon-light: #f9fbf1;
+  --maroon: #eff4e2;
+  --maroon-deep: #e1ead0;
 
   /* card surfaces — a touch brighter than the ground so cards lift off it */
-  --paper: #fffdfa;
+  --paper: #fdfdf6;
 
   /* ornament + text ON the ground */
-  --accent: #a67c52;
-  --accent-dark: #7f5c39;
-  --on-maroon: #46382d;
-  --on-maroon-soft: #6b584a;
+  --accent: #74935a;
+  --accent-dark: #4d6b39;
+  --on-maroon: #33422a;
+  --on-maroon-soft: #556a48;
 
-  /* gold + ink INSIDE card surfaces */
-  --gold: #946b3c;
-  --gold-light: #be9560;
-  --gold-dark: #7a5a2e;
-  --ink: #3f332a;
-  --ink-soft: #6b5a4b;
-  --border: #eadfd1;
+  /* gold + ink INSIDE card surfaces — botanical bronze-olive, standing in
+     for "gold" without leaving the green/earth family */
+  --gold: #7c7240;
+  --gold-light: #a2934f;
+  --gold-dark: #58502a;
+  --ink: #303c26;
+  --ink-soft: #556047;
+  --border: #dfe6cc;
 
-  /* foil gradient stops — bronze-weighted so gilded type reads as metal
-     against ivory rather than washing out */
-  --gild-1: #997842;
-  --gild-2: #8f6a33;
-  --gild-3: #63461e;
+  /* foil gradient stops — brass-green so gilded type still reads as metal
+     against the pale ground rather than washing out */
+  --gild-1: #93a35a;
+  --gild-2: #748a3f;
+  --gild-3: #4c5c28;
 
-  /* functional signal only (RSVP "hadir") */
-  --sage: #4a6337;
-  --sage-light: #5d7643;
-  --sage-dark: #33472a;
+  /* functional signal only (RSVP "hadir") — kept a distinctly brighter,
+     more saturated leaf green so it still reads as its own signal against
+     the now-green ornament/ink palette */
+  --sage: #2f7d3f;
+  --sage-light: #4f9d57;
+  --sage-dark: #1f5c2a;
 }
 
 @theme inline {
@@ -188,9 +191,9 @@ html.scroll-locked {
   /* warm, wide and faint — a near-black shadow reads as a smudge against
      a bright ground, where the dark theme needed it to carve the card out */
   box-shadow:
-    0 0 0 1px rgba(154, 120, 86, 0.16),
-    0 22px 48px -30px rgba(122, 90, 46, 0.4),
-    0 2px 8px -6px rgba(122, 90, 46, 0.22);
+    0 0 0 1px rgba(116, 147, 90, 0.16),
+    0 22px 48px -30px rgba(77, 107, 57, 0.4),
+    0 2px 8px -6px rgba(77, 107, 57, 0.22);
 }
 
 .card-stock::after {

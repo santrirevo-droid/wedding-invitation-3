@@ -30,7 +30,7 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #fdf8f4 0%, #f9f1ea 55%, #f2e5d9 100%)",
+          background: "linear-gradient(135deg, #f9fbf1 0%, #eff4e2 55%, #e1ead0 100%)",
           position: "relative",
         }}
       >
@@ -53,7 +53,7 @@ export default async function Image() {
           style={{
             position: "absolute",
             inset: 28,
-            border: "1.5px solid rgba(166,124,82,0.35)",
+            border: "1.5px solid rgba(116,147,90,0.35)",
           }}
         />
 
@@ -72,7 +72,7 @@ export default async function Image() {
               fontWeight: 500,
               letterSpacing: 10,
               textTransform: "uppercase",
-              color: "#a67c52",
+              color: "#74935a",
             }}
           >
             The Wedding Of
@@ -86,7 +86,7 @@ export default async function Image() {
               fontFamily: "Cormorant Garamond",
               fontSize: 168,
               fontWeight: 600,
-              color: "#46382d",
+              color: "#33422a",
             }}
           >
             <span>{couple.groom.shortName}</span>
@@ -95,7 +95,7 @@ export default async function Image() {
                 fontStyle: "italic",
                 fontWeight: 500,
                 fontSize: 92,
-                color: "#7f5c39",
+                color: "#4d6b39",
               }}
             >
               &amp;
@@ -118,7 +118,7 @@ export default async function Image() {
                 fontWeight: 500,
                 letterSpacing: 6,
                 textTransform: "uppercase",
-                color: "#a67c52",
+                color: "#74935a",
               }}
             >
               {weddingDayName}
@@ -128,7 +128,7 @@ export default async function Image() {
                 fontFamily: "Cormorant Garamond",
                 fontSize: 150,
                 fontWeight: 600,
-                color: "#46382d",
+                color: "#33422a",
                 marginTop: -10,
               }}
             >
@@ -141,7 +141,7 @@ export default async function Image() {
               fontFamily: "Cormorant Garamond",
               fontSize: 22,
               fontWeight: 500,
-              color: "#8a7867",
+              color: "#6b7a5a",
               marginTop: -6,
             }}
           >
