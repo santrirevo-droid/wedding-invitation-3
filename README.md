@@ -3,7 +3,6 @@ Undangan pernikahan digital — Next.js. Diduplikat dari `wedding-invitation-2` 
 ## Checklist sebelum dipakai
 
 - [ ] `lib/weddingData.ts` — nama pasangan, orang tua, Instagram, tanggal & jam acara, venue, rekening, alamat kado. Ini satu-satunya file data yang perlu disentuh; tanggal di Hero/Acara/gambar preview WhatsApp ikut otomatis lewat `lib/weddingDate.ts`.
-- [ ] `components/OurStory/OurStory.tsx` — empat paragraf kisah cinta dan timeline milestone (Bertemu/Dekat/Khitbah/Menikah) masih placeholder bertanda `[...]`; tulis ulang dengan kisah nyata kalian.
 - [ ] `lib/families.ts` — label `guestListFamily` (judul halaman `/daftar-tamu`); default "Daftar Tamu" biasanya sudah pas.
 - [ ] `components/Persiapan/defaultData.ts` — isi awal dashboard `/persiapan` (checklist, rundown, budget) masih generik; sunting atau langsung edit dari halaman setelah deploy.
 - [ ] `public/music/` — tambahkan file lagu sendiri sebagai `wedding-song.mp3` (lihat default `src` di `components/MusicPlayer/MusicPlayer.tsx`; tidak ada file lagu di repo ini karena berhak cipta/personal ke pasangan asal).

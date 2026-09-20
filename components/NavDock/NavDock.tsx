@@ -35,17 +35,6 @@ const items: NavItem[] = [
     ),
   },
   {
-    id: "kisah-kami",
-    label: "Kisah Kami",
-    icon: (
-      <svg {...ICON_PROPS}>
-        <path d="M12 6c-1.8-1.3-4-2-6.5-2A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 1 5.5 16c2.5 0 4.7.7 6.5 2" />
-        <path d="M12 6c1.8-1.3 4-2 6.5-2A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 0-2.5-2c-2.5 0-4.7.7-6.5 2" />
-        <path d="M12 6v12" />
-      </svg>
-    ),
-  },
-  {
     id: "acara",
     label: "Waktu & Tempat",
     icon: (
