@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+:root {
+  /* ── "Blush garden" ───────────────────────────────────────────────────
+     A bright, soft ground: warm ivory washed with blush and sage, antique
+     gold-brown for ornament, deep warm brown for type.
+
+     This is an inversion of the dark theme the design was built on, so
+     every role flipped, not just the hex values: text ON the ground went
+     from ivory to brown, the translucent plates went from near-black to
+     near-white, and the gilded foil gradient had to go DARKER (a pale gold
+     gradient is invisible on ivory — it only read as metal against black).
+
+     Variable NAMES are inherited and deliberately kept: ~15 components
+     reference these Tailwind tokens. Read "maroon-*" as "the page ground"
+     (now light), "accent" as "ornament colour on the ground", "gold-*" as
+     "ink inside a card", "on-maroon-*" as "text on the ground".  */
+
+  /* the ground, lightest at the top of the page */
+  --maroon-light: #fdf8f4;
+  --maroon: #f9f1ea;
+  --maroon-deep: #f4e8de;
+
+  /* card surfaces — a touch brighter than the ground so cards lift off it */
+  --paper: #fffdfa;
+
+  /* ornament + text ON the ground */
+  --accent: #a67c52;
+  --accent-dark: #7f5c39;
+  --on-maroon: #46382d;
+  --on-maroon-soft: #6b584a;
+
+  /* gold + ink INSIDE card surfaces */
+  --gold: #946b3c;
+  --gold-light: #be9560;
+  --gold-dark: #7a5a2e;
+  --ink: #3f332a;
+  --ink-soft: #6b5a4b;
+  --border: #eadfd1;
+
+  /* foil gradient stops — bronze-weighted so gilded type reads as metal
+     against ivory rather than washing out */
+  --gild-1: #997842;
+  --gild-2: #8f6a33;
+  --gild-3: #63461e;
+
+  /* functional signal only (RSVP "hadir") */
+  --sage: #4a6337;
+  --sage-light: #5d7643;
+  --sage-dark: #33472a;
+}
+
+@theme inline {
+  --color-maroon-deep: var(--maroon-deep);
+  --color-maroon: var(--maroon);
+  --color-maroon-light: var(--maroon-light);
+  --color-paper: var(--paper);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-on-maroon: var(--on-maroon);
+  --color-on-maroon-soft: var(--on-maroon-soft);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-border: var(--border);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-dark: var(--sage-dark);
+  --color-gild-1: var(--gild-1);
+  --color-gild-2: var(--gild-2);
+  --color-gild-3: var(--gild-3);
+
+  --font-display: var(--font-display);
+  --font-accent: var(--font-accent);
+  --font-body: var(--font-body);
+  --font-arabic: var(--font-arabic);
+  --font-script: var(--font-script);
+  --font-mempelai: var(--font-mempelai);
+  --font-fullname: var(--font-fullname);
+  --font-handle: var(--font-handle);
+  --font-rsvp: var(--font-rsvp);
+  --font-title-mempelai: var(--font-title-mempelai);
+}
+
+:root {
+  /* Only FOUR families are actually loaded (see app/layout.tsx):
+       --font-display  Cormorant Garamond — every heading and all running copy
+       --font-script   Italianno          — the couple's names, nothing else
+       --font-meta     Jost               — tiny tracked labels, IG handles
+       --font-arabic   Amiri              — the Qur'anic passage
+     Every other token below is an alias, so components can keep their
+     existing font-* classes while the type system stays this small. */
+  --font-body: var(--font-display);
+  --font-accent: var(--font-meta);
+  --font-mempelai: var(--font-display);
+  --font-fullname: var(--font-display);
+  --font-title-mempelai: var(--font-display);
+  --font-handle: var(--font-meta);
+  --font-rsvp: var(--font-script);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: auto; /* Lenis drives scrolling; native smooth fights it */
+}
+
+body {
+  background: var(--maroon-deep);
+  color: var(--on-maroon);
+  /* serif running copy at invitation sizes benefits from the extra optical
+     polish; harmless where unsupported */
+  text-rendering: optimizeLegibility;
+}
+
+html.scroll-locked {
+  overflow: hidden;
+  height: 100%;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
+  color: var(--on-maroon);
+}
+
+/* ── Gilded type ────────────────────────────────────────────────────────
+   Foil-like gradient clipped to the glyphs. Used for display headings and
+   the couple's names — the single strongest "this cost money" signal on
+   the page, so it stays reserved for those. */
+.text-gilded {
+  background-image: linear-gradient(
+    100deg,
+    var(--gild-2) 0%,
+    var(--gild-1) 20%,
+    var(--gild-3) 42%,
+    var(--gild-1) 64%,
+    var(--gild-2) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* slow foil drift — only on the few hero-scale moments that opt in */
+.text-gilded-drift {
+  animation: gild-drift 9s ease-in-out infinite alternate;
+}
+
+@keyframes gild-drift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* ── Hairline rules ─────────────────────────────────────────────────────
+   A 1px line that fades out at both ends, so it reads as engraved rather
+   than drawn. */
+.rule-gild {
+  height: 1px;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--accent) 65%, transparent) 22%,
+    color-mix(in oklab, var(--accent) 80%, transparent) 50%,
+    color-mix(in oklab, var(--accent) 65%, transparent) 78%,
+    transparent
+  );
+}
+
+/* ── Paper surfaces ─────────────────────────────────────────────────────
+   Ivory stock with a gold hairline inset a couple of px from the edge —
+   the classic printed-stationery border, far more expensive-looking than
+   a drop shadow. */
+.card-stock {
+  position: relative;
+  background-image: linear-gradient(
+    180deg,
+    var(--paper) 0%,
+    color-mix(in oklab, var(--paper) 88%, var(--border)) 100%
+  );
+  /* warm, wide and faint — a near-black shadow reads as a smudge against
+     a bright ground, where the dark theme needed it to carve the card out */
+  box-shadow:
+    0 0 0 1px rgba(154, 120, 86, 0.16),
+    0 22px 48px -30px rgba(122, 90, 46, 0.4),
+    0 2px 8px -6px rgba(122, 90, 46, 0.22);
+}
+
+.card-stock::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid color-mix(in oklab, var(--gold) 26%, transparent);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* ── Caution notice ────────────────────────────────────────────────────
+   A gold-toned warning, not the default Tailwind amber — so a "check this"
+   notice (duplicate-name warnings, etc.) still reads as part of the same
+   warm ivory/gold system instead of a clashing off-brand orange. */
+.notice-caution {
+  border: 2px solid color-mix(in oklab, var(--gold) 45%, transparent);
+  background: color-mix(in oklab, var(--gold-light) 20%, var(--paper));
+}
+
+/* ── Shimmer sweep (the "Buka Undangan" button) ───────────────────────
+   A narrower, darker range than .text-gilded: this gradient sits *behind*
+   ivory text, so its lightest stop still has to clear 4.5:1. The full foil
+   ramp would peak too bright and lose the label mid-sweep. */
+.gild-sweep {
+  background-image: linear-gradient(
+    100deg,
+    var(--gild-3) 0%,
+    var(--accent-dark) 28%,
+    var(--gold-dark) 50%,
+    var(--accent-dark) 72%,
+    var(--gild-3) 100%
+  );
+  background-size: 200% 100%;
+  animation: gild-drift 5.5s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-gilded-drift,
+  .gild-sweep {
+    animation: none;
+  }
+}
