@@ -1,4 +1,4 @@
-import { couple, events } from "@/lib/weddingData";
+import { couple, events, venue } from "@/lib/weddingData";
 
 /** Matches the `?to=` format read by useGuestName on the invitation cover/RSVP. */
 export function buildInviteLink(origin: string, guestName: string): string {
@@ -20,6 +20,8 @@ export const DEFAULT_WHATSAPP_MESSAGE_TEMPLATE =
   `${couple.groom.name} & ${couple.bride.name} yang insyaAllah akan diselenggarakan pada ${events[0].date}.\n\n` +
   `Informasi lengkap mengenai acara, serta kolom doa dan ucapan, dapat diakses melalui tautan berikut:\n\n` +
   `🔗 ${WHATSAPP_LINK_TOKEN}\n\n` +
+  `Lokasi resepsi: ${venue.name}\n` +
+  `📍 ${venue.mapsUrl}\n\n` +
   `Terima kasih atas perhatian, doa, dan restunya.\n\n` +
   `Wassalamu'alaikum warahmatullahi wabarakatuh.`;
 
