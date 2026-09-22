@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Botanical, { SectionFloral } from "@/components/Botanical";
 import SectionHeading from "@/components/SectionHeading";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
-import { bankAccounts, giftAddress } from "@/lib/weddingData";
+import { bankAccounts } from "@/lib/weddingData";
 
 /**
  * The envelope this section is named after: a flap folded down over the
@@ -117,39 +117,6 @@ export default function Gift() {
               </button>
             </div>
           ))}
-
-          <div data-reveal className={cardClass}>
-            <EnvelopeFlap />
-
-            <p className="font-accent text-[11px] font-normal uppercase tracking-[0.4em] text-ink-soft">
-              Kirim Hadiah
-            </p>
-            <div className="mt-3 font-display text-[26px] font-light leading-tight text-ink">
-              Alamat Pengiriman
-            </div>
-
-            <Botanical variant="garland" className="mx-auto my-5 w-36 text-gold/60" />
-
-            <div className="mx-auto max-w-[19rem] font-display text-[17px] font-normal leading-[1.65] text-gold-dark">
-              {giftAddress.address}
-            </div>
-            <div className="mt-2 font-display text-[16px] font-normal italic text-ink-soft">
-              a.n. {giftAddress.recipient}
-            </div>
-
-            <button
-              type="button"
-              onClick={() => handleCopy(giftAddress.address, "address")}
-              className={[
-                copyButtonClass,
-                copiedKey === "address"
-                  ? "border-sage-dark bg-sage-dark text-paper"
-                  : "border-gold-dark/45 text-gold-dark hover:border-gold-dark hover:bg-gold-dark/5",
-              ].join(" ")}
-            >
-              {copiedKey === "address" ? "Tersalin ✓" : "Salin Alamat"}
-            </button>
-          </div>
         </div>
       </div>
     </section>

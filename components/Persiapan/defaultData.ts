@@ -7,8 +7,8 @@ export const DEFAULT_DATA: ProgressData = {
     nameFirst: "Muhammad Yusron Nawawi",
     nameSecond: "Charis Khoirun Nisak",
     weddingDate: "2026-09-30",
-    ceremonyTime: "10:00",
-    venue: "Kediaman Mempelai Perempuan",
+    ceremonyTime: "09:00",
+    venue: "Kediaman Mempelai Wanita",
     venueMapUrl: "https://goo.gl/maps/LqVrRjjpvcfhyXDy9?g_st=aw",
     totalBudget: 0,
   },
@@ -25,9 +25,9 @@ export const DEFAULT_DATA: ProgressData = {
     { id: "t10", text: "Finalisasi daftar tamu", pic: "", date: "", done: false },
   ],
   rundown: [
-    { id: "r1", time: "07:00", activity: "Persiapan & make-up pengantin", note: "MUA tiba di lokasi", pic: "MUA" },
-    { id: "r2", time: "10:00", activity: "Resepsi dimulai", note: "", pic: "MC" },
-    { id: "r3", time: "14:00", activity: "Resepsi selesai", note: "", pic: "WO" },
+    { id: "r1", time: "06:00", activity: "Persiapan & make-up pengantin", note: "MUA tiba di lokasi", pic: "MUA" },
+    { id: "r2", time: "09:00", activity: "Tasyakuran dimulai", note: "", pic: "MC" },
+    { id: "r3", time: "13:00", activity: "Tasyakuran selesai", note: "", pic: "WO" },
   ],
   arrivals: [
     { id: "a1", group: "Keluarga mempelai pria", from: "", date: "", time: "", transport: "", count: "", note: "" },
@@ -58,6 +58,6 @@ export const DEFAULT_DATA: ProgressData = {
   ],
   expenses: [],
   familyItinerary: [
-    { id: "fi1", date: "", time: "10:00", activity: "Resepsi", note: "" },
+    { id: "fi1", date: "", time: "09:00", activity: "Tasyakuran Pernikahan", note: "" },
   ],
 };
