@@ -1,4 +1,4 @@
-export const WEDDING_DATE_ISO = "2026-09-20T09:00:00+07:00";
+export const WEDDING_DATE_ISO = "2026-09-30T10:00:00+07:00";
 
 export type CoupleRole = "putra" | "putri";
 
@@ -36,22 +36,17 @@ export const couple: Record<
 
 export const events = [
   {
-    title: "Akad Nikah",
-    time: "09.00 WIB — 10.00 WIB",
-    date: "Minggu, 20 September 2026",
-  },
-  {
     title: "Resepsi",
     time: "10.00 WIB — Selesai",
-    date: "Minggu, 20 September 2026",
+    date: "Rabu, 30 September 2026",
   },
 ];
 
 export const venue = {
-  name: "Kediaman Mempelai Laki-laki",
+  name: "Kediaman Mempelai Perempuan",
   location:
-    "Jl. Tole Iskandar No. 15, Kel. Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415",
-  mapsUrl: "https://goo.gl/maps/RKYQcyQRvSh3GyVQ8?g_st=ac",
+    "Desa Marga Bakti, Kec. Sinar Peninjauan, Kab. Ogan Komering Ulu, Sumatera Selatan",
+  mapsUrl: "https://goo.gl/maps/LqVrRjjpvcfhyXDy9?g_st=aw",
 };
 
 export const bankAccounts = [
@@ -62,5 +57,5 @@ export const bankAccounts = [
 export const giftAddress = {
   recipient: "Muhammad Yusron Nawawi & Charis Khoirun Nisak",
   address:
-    "Jl. Tole Iskandar No. 15, Kel. Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415",
+    "Desa Marga Bakti, Kec. Sinar Peninjauan, Kab. Ogan Komering Ulu, Sumatera Selatan",
 };

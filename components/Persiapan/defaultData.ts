@@ -6,10 +6,10 @@ export const DEFAULT_DATA: ProgressData = {
   settings: {
     nameFirst: "Muhammad Yusron Nawawi",
     nameSecond: "Charis Khoirun Nisak",
-    weddingDate: "2026-09-20",
-    ceremonyTime: "09:00",
-    venue: "Kediaman Mempelai Laki-laki",
-    venueMapUrl: "https://goo.gl/maps/RKYQcyQRvSh3GyVQ8?g_st=ac",
+    weddingDate: "2026-09-30",
+    ceremonyTime: "10:00",
+    venue: "Kediaman Mempelai Perempuan",
+    venueMapUrl: "https://goo.gl/maps/LqVrRjjpvcfhyXDy9?g_st=aw",
     totalBudget: 0,
   },
   tasks: [
@@ -25,11 +25,9 @@ export const DEFAULT_DATA: ProgressData = {
     { id: "t10", text: "Finalisasi daftar tamu", pic: "", date: "", done: false },
   ],
   rundown: [
-    { id: "r1", time: "06:00", activity: "Persiapan & make-up pengantin", note: "MUA tiba di lokasi", pic: "MUA" },
-    { id: "r2", time: "08:00", activity: "Akad nikah / pemberkatan", note: "", pic: "Keluarga inti" },
-    { id: "r3", time: "10:00", activity: "Tamu mulai berdatangan", note: "", pic: "Among tamu" },
-    { id: "r4", time: "12:00", activity: "Resepsi dimulai", note: "", pic: "MC" },
-    { id: "r5", time: "17:00", activity: "Resepsi selesai", note: "", pic: "WO" },
+    { id: "r1", time: "07:00", activity: "Persiapan & make-up pengantin", note: "MUA tiba di lokasi", pic: "MUA" },
+    { id: "r2", time: "10:00", activity: "Resepsi dimulai", note: "", pic: "MC" },
+    { id: "r3", time: "14:00", activity: "Resepsi selesai", note: "", pic: "WO" },
   ],
   arrivals: [
     { id: "a1", group: "Keluarga mempelai pria", from: "", date: "", time: "", transport: "", count: "", note: "" },
@@ -60,6 +58,6 @@ export const DEFAULT_DATA: ProgressData = {
   ],
   expenses: [],
   familyItinerary: [
-    { id: "fi1", date: "", time: "08:00", activity: "Akad Nikah", note: "" },
+    { id: "fi1", date: "", time: "10:00", activity: "Resepsi", note: "" },
   ],
 };

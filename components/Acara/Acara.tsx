@@ -10,8 +10,6 @@ import { CALENDAR_GOOGLE_URL } from "@/lib/calendar";
 import { WEDDING_DATE_ISO, events, venue } from "@/lib/weddingData";
 import { weddingDateLong, weddingDayName } from "@/lib/weddingDate";
 
-const [akad, resepsi] = events;
-
 // target parsed fresh inside the function (not hoisted to a module-level
 // constant) so every call — including from the interval below — is a
 // fully self-contained computation with nothing pre-baked/cached across
@@ -150,19 +148,22 @@ export default function Acara() {
             className="mx-auto mb-8 w-44 text-gold/60"
           />
 
-          <EventBlock title={akad.title} time={akad.time} date={akad.date} />
-
-          <Botanical
-            variant="garland"
-            className="mx-auto my-9 w-40 -scale-y-100 text-gold/60"
-          />
-
-          <EventBlock
-            title={resepsi.title}
-            time={resepsi.time}
-            date={resepsi.date}
-            emphasis
-          />
+          {events.map((event, index) => (
+            <div key={event.title}>
+              {index > 0 && (
+                <Botanical
+                  variant="garland"
+                  className="mx-auto my-9 w-40 -scale-y-100 text-gold/60"
+                />
+              )}
+              <EventBlock
+                title={event.title}
+                time={event.time}
+                date={event.date}
+                emphasis={index === events.length - 1}
+              />
+            </div>
+          ))}
 
           <p className="mt-10 font-accent text-[11px] font-normal uppercase tracking-[0.4em] text-ink-soft">
             Bertempat di
