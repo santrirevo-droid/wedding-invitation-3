@@ -40,11 +40,9 @@ const amiri = Amiri({
   weight: ["400", "700"],
 });
 
-// PLACEHOLDER — update this to the actual deployed domain once you know
-// it (e.g. the Vercel project URL, or a custom domain). Must stay a valid
-// absolute URL: it's required for the WhatsApp/Telegram link-preview image
-// (opengraph-image) to resolve correctly.
-const siteUrl = "https://your-domain.vercel.app";
+// Must stay a valid absolute URL: it's required for the WhatsApp/Telegram
+// link-preview image (opengraph-image) to resolve correctly.
+const siteUrl = "https://charis-yusron.vercel.app";
 const title = `${couple.bride.shortName} & ${couple.groom.shortName} — The Wedding Of`;
 const description = `Undangan pernikahan digital ${couple.bride.name} & ${couple.groom.name} — ${events[0].date}, ${venue.name}.`;
 

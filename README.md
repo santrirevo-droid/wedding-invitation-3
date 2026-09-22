@@ -7,7 +7,7 @@ Undangan pernikahan digital — Next.js. Diduplikat dari `wedding-invitation-2` 
 - [ ] `components/Persiapan/defaultData.ts` — isi awal dashboard `/persiapan` (checklist, rundown, budget) masih generik; sunting atau langsung edit dari halaman setelah deploy.
 - [ ] `public/music/` — tambahkan file lagu sendiri sebagai `wedding-song.mp3` (lihat default `src` di `components/MusicPlayer/MusicPlayer.tsx`; tidak ada file lagu di repo ini karena berhak cipta/personal ke pasangan asal).
 - [ ] `app/opengraph-image.tsx` — gambar preview saat link dibagikan ke WhatsApp/Telegram; otomatis ikut data dari `weddingData.ts`/`weddingDate.ts`, tidak perlu disentuh kecuali mau ubah tata letak/warna.
-- [ ] `app/layout.tsx` — `siteUrl` (dekat atas file) masih placeholder `https://your-domain.vercel.app`; ganti ke domain deploy sebenarnya, wajib supaya gambar preview WhatsApp di atas resolve dengan benar.
+- [x] `app/layout.tsx` — `siteUrl` (dekat atas file) sudah diisi domain deploy sebenarnya (`https://charis-yusron.vercel.app`), wajib supaya gambar preview WhatsApp di atas resolve dengan benar.
 - [ ] `app/icon.png` & `app/apple-icon.png` — masih placeholder ampersand generik; ganti dengan monogram sendiri jika perlu (Hero sendiri sudah pakai inisial pasangan sebagai teks, bukan gambar).
 - [ ] Foto-foto di `public/` (bila ditambahkan nanti) dan galeri — belum ada, tambahkan sesuai kebutuhan.
 - [x] ~~Font "TT Fors" ... trial, no-public-site~~ — sudah diganti total ke Google Fonts (Cormorant Garamond, Italianno, Jost, Amiri); tidak ada lagi font lokal berlisensi trial di repo ini.
