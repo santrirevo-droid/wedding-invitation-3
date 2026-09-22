@@ -3,7 +3,7 @@ import RekapClient from "@/components/GuestList/RekapClient";
 import { couple } from "@/lib/weddingData";
 
 export const metadata: Metadata = {
-  title: `Rekap Daftar Tamu — ${couple.groom.shortName} & ${couple.bride.shortName}`,
+  title: `Rekap Daftar Tamu — ${couple.bride.shortName} & ${couple.groom.shortName}`,
 };
 
 export default function RekapPage() {

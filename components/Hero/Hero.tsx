@@ -144,13 +144,13 @@ export default function Hero() {
               <div aria-hidden="true" className="mt-6 flex items-center justify-center gap-3">
                 <span className="rule-gild w-7 sm:w-9" />
                 <span className="text-gilded font-script text-[2.75rem] leading-none sm:text-[3.25rem]">
-                  {couple.groom.shortName.charAt(0)}
+                  {couple.bride.shortName.charAt(0)}
                 </span>
                 <span className="font-display text-lg font-normal italic leading-none text-accent-dark sm:text-xl">
                   &amp;
                 </span>
                 <span className="text-gilded font-script text-[2.75rem] leading-none sm:text-[3.25rem]">
-                  {couple.bride.shortName.charAt(0)}
+                  {couple.groom.shortName.charAt(0)}
                 </span>
                 <span className="rule-gild w-7 sm:w-9" />
               </div>
@@ -159,13 +159,13 @@ export default function Hero() {
                   full scale, gilded and slowly drifting */}
               <h1 ref={title} className="mt-3 flex flex-col items-center leading-none">
                 <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.95]">
-                  {couple.groom.shortName}
+                  {couple.bride.shortName}
                 </span>
                 <span className="my-1 font-display text-2xl font-light italic text-accent-dark">
                   &amp;
                 </span>
                 <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.95]">
-                  {couple.bride.shortName}
+                  {couple.groom.shortName}
                 </span>
               </h1>
 

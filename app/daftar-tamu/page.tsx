@@ -5,7 +5,7 @@ import { couple, events } from "@/lib/weddingData";
 import GuestListClient from "@/components/GuestList/GuestListClient";
 
 export const metadata: Metadata = {
-  title: `Daftar Tamu — ${couple.groom.shortName} & ${couple.bride.shortName}`,
+  title: `Daftar Tamu — ${couple.bride.shortName} & ${couple.groom.shortName}`,
   description: "Halaman untuk menambahkan nama tamu yang ingin diundang.",
 };
 
@@ -16,7 +16,7 @@ export default function DaftarTamuPage() {
       intro={
         <>
           <p className="mt-2 text-base text-on-maroon-soft">
-            {couple.groom.shortName} &amp; {couple.bride.shortName} — {events[0].date}
+            {couple.bride.shortName} &amp; {couple.groom.shortName} — {events[0].date}
           </p>
           <p className="mt-3 text-base leading-relaxed text-on-maroon-soft">
             Tuliskan nama-nama tamu yang ingin Anda undang, satu nama per baris.

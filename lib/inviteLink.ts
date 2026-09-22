@@ -17,7 +17,7 @@ export const DEFAULT_WHATSAPP_MESSAGE_TEMPLATE =
   `Assalamu'alaikum warahmatullahi wabarakatuh.\n\n` +
   `Yth. Bapak/Ibu/Saudara/i\n${WHATSAPP_NAME_TOKEN}\n\n` +
   `Dengan penuh rasa syukur, kami mengundang Bapak/Ibu/Saudara/i untuk menjadi bagian dari momen bahagia pernikahan ` +
-  `${couple.groom.name} & ${couple.bride.name} yang insyaAllah akan diselenggarakan pada ${events[0].date}.\n\n` +
+  `${couple.bride.name} & ${couple.groom.name} yang insyaAllah akan diselenggarakan pada ${events[0].date}.\n\n` +
   `Informasi lengkap mengenai acara, serta kolom doa dan ucapan, dapat diakses melalui tautan berikut:\n\n` +
   `🔗 ${WHATSAPP_LINK_TOKEN}\n\n` +
   `Lokasi resepsi: ${venue.name}\n` +

@@ -18,7 +18,7 @@ function buildEventDetails() {
   const start = new Date(WEDDING_DATE_ISO);
   const end = new Date(start.getTime() + 4 * 60 * 60 * 1000); // 10.00 resepsi -> perkiraan selesai 14.00
 
-  const summary = `Pernikahan ${couple.groom.shortName} & ${couple.bride.shortName}`;
+  const summary = `Pernikahan ${couple.bride.shortName} & ${couple.groom.shortName}`;
   const location = `${venue.name}, ${venue.location}`;
   const description = [
     ...events.map((event) => `${event.title}: ${event.time}`),
@@ -34,7 +34,7 @@ function buildIcs() {
   const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    `PRODID:-//${couple.groom.shortName} & ${couple.bride.shortName} Wedding//ID`,
+    `PRODID:-//${couple.bride.shortName} & ${couple.groom.shortName} Wedding//ID`,
     "CALSCALE:GREGORIAN",
     "BEGIN:VEVENT",
     `UID:${coupleSlug}-wedding@undangan`,

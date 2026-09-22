@@ -3,7 +3,7 @@ import Itinerary from "@/components/Persiapan/Itinerary";
 import { couple, venue } from "@/lib/weddingData";
 
 export const metadata: Metadata = {
-  title: `Itinerary Keluarga — ${couple.groom.shortName} & ${couple.bride.shortName}`,
+  title: `Itinerary Keluarga — ${couple.bride.shortName} & ${couple.groom.shortName}`,
   description: `Kedatangan, penginapan, dan rute perjalanan keluarga selama di ${venue.location}.`,
 };
 
