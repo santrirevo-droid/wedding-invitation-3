@@ -17,11 +17,6 @@ type MusicPlayerProps = {
   className?: string;
 };
 
-// the song's intro is skipped — playback always starts at this mark and,
-// since `loop` alone would restart from 0:00, loops back to it manually
-// instead of the top of the file
-const LOOP_START_SECONDS = 40;
-
 const MusicPlayer = forwardRef<MusicPlayerHandle, MusicPlayerProps>(
   ({ src = "/music/wedding-song.mp3", className = "" }, ref) => {
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -44,34 +39,6 @@ const MusicPlayer = forwardRef<MusicPlayerHandle, MusicPlayerProps>(
           });
       },
     }));
-
-    // seek to the loop-start mark as soon as it's seekable (readiness for
-    // .currentTime needs loadedmetadata, not just the play() call below),
-    // and loop back to that same mark on end instead of the top of the file
-    useEffect(() => {
-      const audio = audioRef.current;
-      if (!audio) return;
-
-      let hasSeeked = false;
-
-      const handleLoadedMetadata = () => {
-        if (hasSeeked) return;
-        hasSeeked = true;
-        audio.currentTime = LOOP_START_SECONDS;
-      };
-
-      const handleEnded = () => {
-        audio.currentTime = LOOP_START_SECONDS;
-        audio.play().catch(() => {});
-      };
-
-      audio.addEventListener("loadedmetadata", handleLoadedMetadata);
-      audio.addEventListener("ended", handleEnded);
-      return () => {
-        audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
-        audio.removeEventListener("ended", handleEnded);
-      };
-    }, []);
 
     // browsers refuse to play audio with sound until the visitor performs
     // some gesture on the page — there is no way to start truly on load, so
@@ -176,7 +143,7 @@ const MusicPlayer = forwardRef<MusicPlayerHandle, MusicPlayerProps>(
 
     return (
       <>
-        <audio ref={audioRef} src={src} preload="none" />
+        <audio ref={audioRef} src={src} loop preload="none" />
         <button
           type="button"
           onClick={toggle}
