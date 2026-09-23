@@ -18,9 +18,6 @@ type MusicPlayerProps = {
 };
 
 const MusicPlayer = forwardRef<MusicPlayerHandle, MusicPlayerProps>(
-  // PLACEHOLDER — no song ships with this template (the original was
-  // licensed/personal to a specific couple). Add your own file at
-  // public/music/wedding-song.mp3 (see README) or pass a different src.
   ({ src = "/music/wedding-song.mp3", className = "" }, ref) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);

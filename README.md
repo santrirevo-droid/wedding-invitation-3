@@ -5,7 +5,7 @@ Undangan pernikahan digital — Next.js. Diduplikat dari `wedding-invitation-2` 
 - [ ] `lib/weddingData.ts` — nama pasangan, orang tua, Instagram, tanggal & jam acara, venue, rekening. Ini satu-satunya file data yang perlu disentuh; tanggal di Hero/Acara/gambar preview WhatsApp ikut otomatis lewat `lib/weddingDate.ts`.
 - [ ] `lib/families.ts` — label `guestListFamily` (judul halaman `/daftar-tamu`); default "Daftar Tamu" biasanya sudah pas.
 - [ ] `components/Persiapan/defaultData.ts` — isi awal dashboard `/persiapan` (checklist, rundown, budget) masih generik; sunting atau langsung edit dari halaman setelah deploy.
-- [ ] `public/music/` — tambahkan file lagu sendiri sebagai `wedding-song.mp3` (lihat default `src` di `components/MusicPlayer/MusicPlayer.tsx`; tidak ada file lagu di repo ini karena berhak cipta/personal ke pasangan asal).
+- [x] `public/music/wedding-song.mp3` — sudah diisi lagu pilihan sendiri (lihat default `src` di `components/MusicPlayer/MusicPlayer.tsx`).
 - [ ] `app/opengraph-image.tsx` — gambar preview saat link dibagikan ke WhatsApp/Telegram; otomatis ikut data dari `weddingData.ts`/`weddingDate.ts`, tidak perlu disentuh kecuali mau ubah tata letak/warna.
 - [x] `app/layout.tsx` — `siteUrl` (dekat atas file) sudah diisi domain deploy sebenarnya (`https://charis-yusron.vercel.app`), wajib supaya gambar preview WhatsApp di atas resolve dengan benar.
 - [ ] `app/icon.png` & `app/apple-icon.png` — masih placeholder ampersand generik; ganti dengan monogram sendiri jika perlu (Hero sendiri sudah pakai inisial pasangan sebagai teks, bukan gambar).
