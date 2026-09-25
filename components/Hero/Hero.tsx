@@ -125,7 +125,7 @@ export default function Hero() {
             }}
           />
 
-          <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-md flex-col items-center justify-center gap-8 px-8 py-20 text-center">
+          <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-md flex-col items-center justify-center gap-6 px-8 py-16 text-center">
             <div ref={content} className="flex flex-col items-center">
               <p
                 dir="rtl"
@@ -135,13 +135,13 @@ export default function Hero() {
                 بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
               </p>
 
-              <p className="mt-7 font-accent text-[11px] font-normal uppercase tracking-[0.5em] text-on-maroon-soft">
+              <p className="mt-4 font-accent text-[11px] font-normal uppercase tracking-[0.5em] text-on-maroon-soft">
                 The Wedding Of
               </p>
 
               {/* monogram — the couple's initials, not a generic sprig, so it
                   stays correct automatically if shortName ever changes */}
-              <div aria-hidden="true" className="mt-6 flex items-center justify-center gap-3">
+              <div aria-hidden="true" className="mt-3 flex items-center justify-center gap-3">
                 <span className="rule-gild w-7 sm:w-9" />
                 <span className="text-gilded font-script text-[2.75rem] leading-none sm:text-[3.25rem]">
                   {couple.bride.shortName.charAt(0)}
@@ -157,11 +157,11 @@ export default function Hero() {
 
               {/* the couple's names — the one place the script face appears at
                   full scale, gilded and slowly drifting */}
-              <h1 ref={title} className="mt-3 flex flex-col items-center leading-none">
+              <h1 ref={title} className="mt-1.5 flex flex-col items-center leading-none">
                 <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.95]">
                   {couple.bride.shortName}
                 </span>
-                <span className="my-1 font-display text-2xl font-light italic text-accent-dark">
+                <span className="-my-0.5 font-display text-2xl font-light italic text-accent-dark">
                   &amp;
                 </span>
                 <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.95]">
@@ -170,7 +170,7 @@ export default function Hero() {
               </h1>
 
               {/* date, set as three tracked numerals between hairlines */}
-              <div className="mt-7 flex items-center gap-4">
+              <div className="mt-5 flex items-center gap-4">
                 <span className="rule-gild w-10 sm:w-14" />
                 <p className="flex items-baseline gap-2.5 font-display text-lg font-normal tracking-[0.18em] text-on-maroon">
                   <span>{weddingDay}</span>
@@ -182,14 +182,14 @@ export default function Hero() {
                 <span className="rule-gild w-10 sm:w-14" />
               </div>
 
-              <div className="mt-9">
+              <div className="mt-6">
                 <Suspense fallback={<GuestGreetingFallback />}>
                   <GuestGreeting />
                 </Suspense>
               </div>
             </div>
 
-            <div ref={button} className="flex flex-col items-center gap-4">
+            <div ref={button} className="flex flex-col items-center gap-3">
               <InvitationButton
                 onClick={() => {
                   idle.stop();
