@@ -158,19 +158,19 @@ export default function Hero() {
               {/* the couple's names — the one place the script face appears at
                   full scale, gilded and slowly drifting */}
               <h1 ref={title} className="mt-1.5 flex flex-col items-center leading-none">
-                <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.95]">
+                <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.8]">
                   {couple.bride.shortName}
                 </span>
-                <span className="-my-0.5 font-display text-2xl font-light italic text-accent-dark">
+                <span className="-my-2 font-display text-2xl font-light italic text-accent-dark">
                   &amp;
                 </span>
-                <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.95]">
+                <span className="text-gilded text-gilded-drift font-script text-[clamp(3.2rem,20vw,5.5rem)] leading-[0.8]">
                   {couple.groom.shortName}
                 </span>
               </h1>
 
               {/* date, set as three tracked numerals between hairlines */}
-              <div className="mt-5 flex items-center gap-4">
+              <div className="mt-3 flex items-center gap-4">
                 <span className="rule-gild w-10 sm:w-14" />
                 <p className="flex items-baseline gap-2.5 font-display text-lg font-normal tracking-[0.18em] text-on-maroon">
                   <span>{weddingDay}</span>
