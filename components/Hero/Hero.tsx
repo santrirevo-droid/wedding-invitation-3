@@ -80,7 +80,7 @@ export default function Hero() {
               page, kept legible by living entirely behind the type */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-[46%] w-[23rem] -translate-x-1/2 -translate-y-1/2 text-accent/25 sm:w-[26rem]"
+            className="pointer-events-none absolute left-1/2 top-[40%] w-[23rem] -translate-x-1/2 -translate-y-1/2 text-accent/25 sm:w-[26rem]"
           >
             <Botanical variant="wreath" className="w-full" />
           </div>
@@ -125,7 +125,7 @@ export default function Hero() {
             }}
           />
 
-          <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-md flex-col items-center justify-center gap-6 px-8 py-16 text-center">
+          <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-md flex-col items-center justify-center gap-6 px-8 pb-32 pt-12 text-center">
             <div ref={content} className="flex flex-col items-center">
               <p
                 dir="rtl"
