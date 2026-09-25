@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import gsap from "gsap";
 import { useLenis } from "lenis/react";
 import type Lenis from "lenis";
@@ -98,10 +98,9 @@ function autoScrollThroughInvitation(lenis: Lenis) {
 }
 
 /**
- * Orchestrates the "Buka Undangan" cover animation (Tahap 2): scroll
- * locks, music starts, a soft glow blooms and the title lifts with a
- * gentle zoom — then scroll unlocks and, once unlocked,
- * autoScrollThroughInvitation carries the visitor down through the rest
+ * Orchestrates the "Buka Undangan" cover animation (Tahap 2): music
+ * starts, a soft glow blooms and the title lifts with a gentle zoom —
+ * then autoScrollThroughInvitation carries the visitor down through the rest
  * of the page at a readable pace. Skipped under reduced-motion so those
  * visitors keep manual control.
  *
@@ -113,34 +112,11 @@ export function useOpenInvitation(refs: CoverRefs) {
   const isAnimating = useRef(false);
   const lenis = useLenis();
 
-  // scroll stays locked to the cover until "Buka Undangan" is pressed — a
-  // guest can't scroll (and thus can't dodge) past it, and the CTA tap is
-  // also a real click, which is the one gesture mobile browsers reliably
-  // accept for unlocking audio playback.
-  //
-  // The CSS class alone isn't enough: Lenis drives scroll itself (it
-  // intercepts wheel/touch and calls its own scrollTo), so a wheel/touch
-  // event still moves the page even with html.scroll-locked's overflow:
-  // hidden in place. lenis.stop() is what actually halts Lenis's internal
-  // scroll loop; the class is kept alongside it for the CSS-only fallback
-  // (no-JS, or before Lenis has initialised) and for the overflow-hidden
-  // visual it provides during the reveal animation.
-  useEffect(() => {
-    document.documentElement.classList.add("scroll-locked");
-    lenis?.stop();
-    return () => {
-      document.documentElement.classList.remove("scroll-locked");
-      lenis?.start();
-    };
-  }, [lenis]);
-
   const open = useCallback(() => {
     if (isAnimating.current) return;
     isAnimating.current = true;
     setIsOpened(true);
 
-    // already locked by the mount effect above; scroll stays locked
-    // through the reveal animation and is released in onComplete below
     refs.music.current?.play();
 
     // "Tersingkap": the floral frame parts outward from the centre, like
@@ -166,9 +142,6 @@ export function useOpenInvitation(refs: CoverRefs) {
       .timeline({
         defaults: { ease: "power3.out" },
         onComplete: () => {
-          document.documentElement.classList.remove("scroll-locked");
-          lenis?.start();
-
           if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             return;
           }

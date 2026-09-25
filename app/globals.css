@@ -117,11 +117,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-html.scroll-locked {
-  overflow: hidden;
-  height: 100%;
-}
-
 ::selection {
   background: color-mix(in oklab, var(--accent) 35%, transparent);
   color: var(--on-maroon);

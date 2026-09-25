@@ -80,7 +80,7 @@ export default function Hero() {
               page, kept legible by living entirely behind the type */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-[40%] w-[23rem] -translate-x-1/2 -translate-y-1/2 text-accent/25 sm:w-[26rem]"
+            className="pointer-events-none absolute left-1/2 top-[36%] w-[23rem] -translate-x-1/2 -translate-y-1/2 text-accent/25 sm:w-[26rem]"
           >
             <Botanical variant="wreath" className="w-full" />
           </div>
@@ -125,7 +125,7 @@ export default function Hero() {
             }}
           />
 
-          <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-md flex-col items-center justify-center gap-6 px-8 pb-32 pt-12 text-center">
+          <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-md flex-col items-center justify-center gap-6 px-8 pb-44 pt-8 text-center">
             <div ref={content} className="flex flex-col items-center">
               <p
                 dir="rtl"
@@ -170,7 +170,7 @@ export default function Hero() {
               </h1>
 
               {/* date, set as three tracked numerals between hairlines */}
-              <div className="mt-1 flex items-center gap-4">
+              <div className="-mt-2 flex items-center gap-4">
                 <span className="rule-gild w-10 sm:w-14" />
                 <p className="flex items-baseline gap-2.5 font-display text-lg font-normal tracking-[0.18em] text-on-maroon">
                   <span>{weddingDay}</span>
