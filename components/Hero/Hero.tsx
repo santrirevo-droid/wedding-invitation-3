@@ -170,7 +170,7 @@ export default function Hero() {
               </h1>
 
               {/* date, set as three tracked numerals between hairlines */}
-              <div className="mt-3 flex items-center gap-4">
+              <div className="mt-1 flex items-center gap-4">
                 <span className="rule-gild w-10 sm:w-14" />
                 <p className="flex items-baseline gap-2.5 font-display text-lg font-normal tracking-[0.18em] text-on-maroon">
                   <span>{weddingDay}</span>
